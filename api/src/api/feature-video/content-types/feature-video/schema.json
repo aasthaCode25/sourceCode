@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "feature_videos",
+  "info": {
+    "singularName": "feature-video",
+    "pluralName": "feature-videos",
+    "displayName": "featureVideo"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "title": {
+      "type": "string"
+    },
+    "video": {
+      "allowedTypes": [
+        "videos"
+      ],
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

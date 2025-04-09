@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "job_postings",
+  "info": {
+    "singularName": "job-posting",
+    "pluralName": "job-postings",
+    "displayName": "jobPosting"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "Role": {
+      "type": "string"
+    },
+    "shortDescription": {
+      "type": "text"
+    },
+    "projectDescription": {
+      "allowedTypes": [
+        "files"
+      ],
+      "type": "media",
+      "multiple": false
+    },
+    "jobId": {
+      "type": "uid",
+      "targetField": "Role"
+    }
+  }
+}
