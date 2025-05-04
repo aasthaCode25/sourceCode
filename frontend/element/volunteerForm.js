@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 
 function onChange(value) {
@@ -6,6 +6,7 @@ function onChange(value) {
 }
 
 function VolunteerForm() {
+    const [status, setStatus] = useState(null);
   const handleSubmit = async (e) => {
     e.preventDefault();
     const formData = new FormData(e.target);
@@ -49,11 +50,11 @@ function VolunteerForm() {
       });
 console.log(response)
       if (response.ok) {
-        console.log("Form submitted successfully!");
+        setStatus("Application submitted successfully!");
         e.target.reset();
       } else {
-        console.error("Failed to submit form");
-        alert("Failed to submit form. Please try again.");
+        const errorData = await response.json();
+        setStatus(`Submission failed: ${errorData.error || 'An error occurred'}`);
       }
     } catch (error) {
       console.error("Error submitting form:", error);
@@ -160,6 +161,13 @@ console.log(response)
                     onChange={onChange}
                   />
                 </div> */}
+                {status && (
+                  <div className="col-12 mt-2">
+                    <p className={`text-center ${status.startsWith("Error") ? "text-danger" : "text-success"}`}>
+                      {status}
+                    </p>
+                  </div>
+                )}
                 <div className="col-sm-12 mt-2">
                   <button 
                     name="submit" 

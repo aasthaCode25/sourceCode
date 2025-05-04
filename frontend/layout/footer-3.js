@@ -63,10 +63,7 @@ function Footer3() {
 						<div className="widget widget_getintuch">
 							<h5 className="footer-title">Contact Us</h5>
 							<ul>
-								<li>
-									<i className="fa fa-phone gradient"></i>
-									<span>+91 123-456-7890<br/>+91 987-654-3210</span> 
-								</li>
+	
 								<li>
 									<i className="fa fa-envelope gradient"></i> 
 									<span>info@example.com <br/>info@example.com</span>

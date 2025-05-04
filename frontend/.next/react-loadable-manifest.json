@@ -1,64 +1,64 @@
 {
-  "..\\node_modules\\next\\dist\\client\\index.js -> ../pages/_error": {
-    "id": "..\\node_modules\\next\\dist\\client\\index.js -> ../pages/_error",
+  "../node_modules/next/dist/client/index.js -> ../pages/_error": {
+    "id": 9651,
     "files": [
-      "static/chunks/node_modules_next_dist_pages__error_js.js"
+      "static/chunks/9651.fa928ee6b0abac46.js"
     ]
   },
-  "..\\node_modules\\react-player\\lib\\ReactPlayer.js -> ./Preview": {
-    "id": "..\\node_modules\\react-player\\lib\\ReactPlayer.js -> ./Preview",
+  "../node_modules/react-player/lib/ReactPlayer.js -> ./Preview": {
+    "id": null,
     "files": []
   },
-  "..\\node_modules\\react-player\\lib\\players\\index.js -> ./DailyMotion": {
-    "id": "..\\node_modules\\react-player\\lib\\players\\index.js -> ./DailyMotion",
+  "../node_modules/react-player/lib/players/index.js -> ./DailyMotion": {
+    "id": null,
     "files": []
   },
-  "..\\node_modules\\react-player\\lib\\players\\index.js -> ./Facebook": {
-    "id": "..\\node_modules\\react-player\\lib\\players\\index.js -> ./Facebook",
+  "../node_modules/react-player/lib/players/index.js -> ./Facebook": {
+    "id": null,
     "files": []
   },
-  "..\\node_modules\\react-player\\lib\\players\\index.js -> ./FilePlayer": {
-    "id": "..\\node_modules\\react-player\\lib\\players\\index.js -> ./FilePlayer",
+  "../node_modules/react-player/lib/players/index.js -> ./FilePlayer": {
+    "id": null,
     "files": []
   },
-  "..\\node_modules\\react-player\\lib\\players\\index.js -> ./Kaltura": {
-    "id": "..\\node_modules\\react-player\\lib\\players\\index.js -> ./Kaltura",
+  "../node_modules/react-player/lib/players/index.js -> ./Kaltura": {
+    "id": null,
     "files": []
   },
-  "..\\node_modules\\react-player\\lib\\players\\index.js -> ./Mixcloud": {
-    "id": "..\\node_modules\\react-player\\lib\\players\\index.js -> ./Mixcloud",
+  "../node_modules/react-player/lib/players/index.js -> ./Mixcloud": {
+    "id": null,
     "files": []
   },
-  "..\\node_modules\\react-player\\lib\\players\\index.js -> ./Mux": {
-    "id": "..\\node_modules\\react-player\\lib\\players\\index.js -> ./Mux",
+  "../node_modules/react-player/lib/players/index.js -> ./Mux": {
+    "id": null,
     "files": []
   },
-  "..\\node_modules\\react-player\\lib\\players\\index.js -> ./SoundCloud": {
-    "id": "..\\node_modules\\react-player\\lib\\players\\index.js -> ./SoundCloud",
+  "../node_modules/react-player/lib/players/index.js -> ./SoundCloud": {
+    "id": null,
     "files": []
   },
-  "..\\node_modules\\react-player\\lib\\players\\index.js -> ./Streamable": {
-    "id": "..\\node_modules\\react-player\\lib\\players\\index.js -> ./Streamable",
+  "../node_modules/react-player/lib/players/index.js -> ./Streamable": {
+    "id": null,
     "files": []
   },
-  "..\\node_modules\\react-player\\lib\\players\\index.js -> ./Twitch": {
-    "id": "..\\node_modules\\react-player\\lib\\players\\index.js -> ./Twitch",
+  "../node_modules/react-player/lib/players/index.js -> ./Twitch": {
+    "id": null,
     "files": []
   },
-  "..\\node_modules\\react-player\\lib\\players\\index.js -> ./Vidyard": {
-    "id": "..\\node_modules\\react-player\\lib\\players\\index.js -> ./Vidyard",
+  "../node_modules/react-player/lib/players/index.js -> ./Vidyard": {
+    "id": null,
     "files": []
   },
-  "..\\node_modules\\react-player\\lib\\players\\index.js -> ./Vimeo": {
-    "id": "..\\node_modules\\react-player\\lib\\players\\index.js -> ./Vimeo",
+  "../node_modules/react-player/lib/players/index.js -> ./Vimeo": {
+    "id": null,
     "files": []
   },
-  "..\\node_modules\\react-player\\lib\\players\\index.js -> ./Wistia": {
-    "id": "..\\node_modules\\react-player\\lib\\players\\index.js -> ./Wistia",
+  "../node_modules/react-player/lib/players/index.js -> ./Wistia": {
+    "id": null,
     "files": []
   },
-  "..\\node_modules\\react-player\\lib\\players\\index.js -> ./YouTube": {
-    "id": "..\\node_modules\\react-player\\lib\\players\\index.js -> ./YouTube",
+  "../node_modules/react-player/lib/players/index.js -> ./YouTube": {
+    "id": null,
     "files": []
   }
 }

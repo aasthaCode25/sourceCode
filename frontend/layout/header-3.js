@@ -67,7 +67,7 @@ function Header3() {
                                 <li><Link href="/ourstories"><a>Our Stories</a></Link></li>
                                 <li className={`${open === "supportus" ? "open" : ""}`}><a onClick={() => setOpen("supportus")}><span>Our Resources</span><i className="fa fa-chevron-down"></i></a>
                                     <ul className="sub-menu">
-                                        <li><Link href="/donations"><a>Resources</a></Link></li>
+                                        <li><Link href="/ourResources"><a>Resources</a></Link></li>
 										<li><Link href="/reports"><a>Reports</a></Link></li>
                            
                                         {/* <li><Link href="/wishlistPage"><a>Amazon Wishlists</a></Link></li> */}
@@ -91,10 +91,10 @@ function Header3() {
                             </ul>
                             <div className="dlab-social-icon">
                                 <ul>
-                                    <Link href="https://en-gb.facebook.com/"><a className="fa fa-facebook"></a></Link>
-                                    <Link href="https://twitter.com/login?lang=en"><a className="fa fa-twitter"></a></Link>
-                                    <Link href="https://www.linkedin.com/login"><a className="fa fa-linkedin"></a></Link>
-                                    <Link href="https://www.instagram.com/"><a className="fa fa-instagram"></a></Link>
+                                    <Link href="https://www.facebook.com/aasthaparivaarmumbai"><a className="fa fa-facebook"></a></Link>
+                                   
+                                    <Link href="https://www.linkedin.com/in/aastha-parivaar-a476b6244"><a className="fa fa-linkedin"></a></Link>
+                                    <Link href="https://www.instagram.com/aasthaparivaar_ngo/"><a className="fa fa-instagram"></a></Link>
                                 </ul>
                             </div>		
                         </div>

@@ -19,7 +19,7 @@ import { UpdateContext } from "../context/updatedata";
 import ServiceSlider from "../component/serviceslider";
 function Index2() {
 const {blogData, setBlogData} = useContext(UpdateContext);
-console.log("xxxx", blogData)
+
 
   return (
     <>
@@ -72,7 +72,7 @@ console.log("xxxx", blogData)
           }}
           className="px-2 px-md-4" // Responsive inner padding
         >
-          We aim to empower sex workers in Mumbai and Thane to live healthy,
+          We aim to empower Marginalised Communities in Mumbai and Thane to live healthy,
           dignified lives, free from discrimination, by providing them with
           resources, support, and a platform to advocate for their rights,
           while their vision is a community of sex workers that are healthy,

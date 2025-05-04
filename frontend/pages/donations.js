@@ -73,7 +73,7 @@ const Donations = () => {
         <div className="col-md-12">
           <a href="https://www.helpyourngo.com/ngo-details.php?ngo=491&name=Aastha-Parivaar" target='blank' className="btn btn-primary btn-lg">Donate Online</a>
           <p className="mt-3">
-            HelpYourNGO is an online social services organization that helps you evaluate & analyse NGOs before you donate your money to a cause or charities. To make a donation through HelpYourNGO, Click Here.
+            HelpYourNGO is an online social services organization that helps you evaluate & analyse NGOs before you donate your money to a cause or charities.
           </p>
         </div>
       </div>

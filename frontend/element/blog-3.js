@@ -7,13 +7,8 @@ import { UpdateContext } from "../context/updatedata";
 function Blog3({ blogs, totalPages, currentPage, onPageChange }) {
 	const { blogData } = useContext(UpdateContext);
 	
-console.log("pageeeeeeeeeeeeeee",blogs)
-	// const [blog, setBlog] = useState(null);
-	//  const data = blogs;
-	// console.log("dataaaaaaa", data)
-	// const { title } = data[1];
-	// const image = blog[1]?.title;
-	// console.log("image",image)
+
+
   return (
     <>
      {/* <!-- Blog --> */}
@@ -25,10 +20,10 @@ console.log("pageeeeeeeeeeeeeee",blogs)
 				</div>
 				<div className="row">
                {blogs?.map((blog)=>(
-				<div className="col-xl-6 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.2s">
+				<div key={blog.documentId} className="col-xl-6 wow fadeInUp" data-wow-duration="2s" data-wow-delay="0.2s">
 				<div className="dlab-blog blog-half m-b30">
 					<div className="dlab-media">
-						 <Link href="blog-details-3"><a><img src={blog?.image1?.formats?.thumbnail?.url} 
+						 <Link href={`/ourstories/${blog.documentId}`}><a><img src={blog?.image1?.formats?.thumbnail?.url} 
         alt={blog.title || "Blog post"} style={{height:"200px"}}/></a></Link> 
 					</div>
 					<div className="dlab-info">
@@ -59,32 +54,39 @@ console.log("pageeeeeeeeeeeeeee",blogs)
 					
 				</div>
 				{totalPages > 1 && (
-            <div className="pagination text-center mt-4 d-flex justify-content-center ">
-              <button
-                className="btn btn-primary me-2"
-                disabled={currentPage === 1}
-                onClick={() => onPageChange(currentPage - 1)}
-              >
-                Previous
-              </button>
-              {Array.from({ length: totalPages }, (_, index) => (
-                <button
-                  key={index + 1}
-                  className={`btn ${currentPage === index + 1 ? "btn-primary" : "btn-outline-primary"} mx-1`}
-                  onClick={() => onPageChange(index + 1)}
-                >
-                  {index + 1}
-                </button>
-              ))}
-              <button
-                className="btn btn-primary ms-2"
-                disabled={currentPage === totalPages}
-                onClick={() => onPageChange(currentPage + 1)}
-              >
-                Next
-              </button>
-            </div>
-          )}
+  <div className="container mt-4">
+    <div className="row justify-content-center">
+      <div className="col-12 col-md-auto d-flex flex-wrap justify-content-center gap-2">
+        <button
+          className="btn btn-primary"
+          disabled={currentPage === 1}
+          onClick={() => onPageChange(currentPage - 1)}
+        >
+          Previous
+        </button>
+        {Array.from({ length: totalPages }, (_, index) => (
+          <button
+            key={index + 1}
+            className={`btn  m-1 ${
+              currentPage === index + 1 ? "btn-primary" : "btn-outline-primary"
+            }`}
+            onClick={() => onPageChange(index + 1)}
+          >
+            {index + 1}
+          </button>
+        ))}
+        <button
+          className="btn btn-primary"
+          disabled={currentPage === totalPages}
+          onClick={() => onPageChange(currentPage + 1)}
+        >
+          Next
+        </button>
+      </div>
+    </div>
+  </div>
+)}
+
 			</div>
 		</section>
     </>

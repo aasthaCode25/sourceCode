@@ -32,7 +32,7 @@ function Slider2() {
                     animationName: "fadeInUp",
                   }}
                 >
-       Empowering Sex Worker Communities for a Stronger Future
+       Empowering Marginalised Communities for a Stronger Future
                 </h1>
                 {/* <p
                   className="wow fadeInUp m-b30"

@@ -15,7 +15,14 @@ module.exports = [
       },
     },
   },
-  'strapi::cors',
+ {
+    name: 'strapi::cors',
+    config: {
+      origin: ['https://aasthaparivaar.org','https://69.62.75.177', 'http://69.62.75.177:1337','https://www.aasthaparivaar.org'], // Add your Next.js and Strapi origins
+      methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+      headers: ['Content-Type', 'Authorization'],
+    },
+  },
   'strapi::poweredBy',
   'strapi::query',
   'strapi::body',

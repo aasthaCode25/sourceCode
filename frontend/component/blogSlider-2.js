@@ -112,7 +112,7 @@ function BlogSlider2() {
                       color: "#000",
                     }}
                   >
-                    <Link href="/blog-details-2">
+                    <Link href={`/ourstories/${documentId}`}>
                       <a style={{ textDecoration: "none", color: "inherit" }}>{titile}</a>
                     </Link>
                   </h4>

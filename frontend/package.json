@@ -4,7 +4,7 @@
     "private": true,
     "scripts": {
         "dev": "next dev -p 5001",
-        "start": "react-scripts --openssl-legacy-provider start",
+        "start": "next start",
         "build": "next build",
         "sass": "node-sass --watch scss/main.scss css/style.css --source-map css/style.css.map"
     },
@@ -12,6 +12,7 @@
         "@n8tb1t/use-scroll-position": "^2.0.3",
         "@strapi/blocks-react-renderer": "^1.0.0",
         "axios": "^1.8.2",
+        "dotenv": "^16.5.0",
         "formidable": "^3.5.2",
         "moment": "^2.29.1",
         "multer": "^1.4.5-lts.1",

@@ -13,14 +13,7 @@ function OurStories({blogs}) {
 	const [blogsPerPage] = useState(4);
 	const { blogData, setBlogData } = useContext(UpdateContext);
 	setBlogData(blogs)
-//   useEffect(()=>{
-//   	const fetchBlogs = async () => {
-//  		const response = await fetch("http://localhost:1337/api/blogs?populate=*") 
-//   		const data = await response.json();
-//   		setBlogData(data?.data)
-// 	}
-//  	fetchBlogs();
-//   },[])
+
   const indexOfLastBlog = currentPage * blogsPerPage;
   const indexOfFirstBlog = indexOfLastBlog - blogsPerPage;
   const currentBlogs = blogData?.slice(indexOfFirstBlog, indexOfLastBlog) || [];
@@ -35,7 +28,7 @@ function OurStories({blogs}) {
     }
   };
   
-console.log("blogssss", blogData)
+
   return (
    <>
 	<Header3/>

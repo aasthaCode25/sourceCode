@@ -14,8 +14,8 @@ const sendSimpleMail = async ({ name, email, phone, position, experience, skills
       port: 465,
       secure: true,
       auth: {
-        user: process.env.EMAIL_USER || "shyamalfred@gmail.com",
-        pass: process.env.EMAIL_PASS || "ltjldqphmnsexyna",
+        user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
       },
       tls: {
         rejectUnauthorized: false, // Bypass certificate validation
@@ -24,7 +24,7 @@ const sendSimpleMail = async ({ name, email, phone, position, experience, skills
   
     const mailOptions = {
         from: `"Job Application Bot" <${process.env.EMAIL_USER || "shyamalfred@gmail.com"}>`,
-        to: process.env.RECIPIENT_EMAIL || "razoralf67@gmail.com",
+        to: process.env.RECIPIENT_EMAIL,
         subject: `Job Application from ${name}`,
         html: `
           <div style="font-family: Arial, sans-serif; padding: 20px; border-radius: 10px; background-color: #f5f5f5;">

@@ -18,7 +18,7 @@ function Storydetails() {
   }
 
   const selectedBlogItem = selectedBlog[0]; // Assuming there's only one match
-console.log(selectedBlogItem.section1)
+
   return (
     <>
       <Header3 />
@@ -50,10 +50,12 @@ console.log(selectedBlogItem.section1)
               <div className="col-xl-12">
                 {/* blog start */}
                 <div className="dlab-blog blog-single style-2">
-                  <div className="dlab-media rounded-md shadow">
-                    {selectedBlogItem?.image1?.formats?.small?.url && (
-                      <img src={selectedBlogItem?.image1?.formats?.small?.url} alt="" style={{maxHeight:"600px"}}/>
+                  
+                     <div className="dlab-media rounded-md shadow">
+                    {selectedBlogItem?.image1?.formats?.thumbnail?.url && (
+                      <img src={selectedBlogItem?.image1?.formats?.large?.url || selectedBlogItem?.image1?.formats?.small?.url || selectedBlogItem?.image1?.formats?.thumbnail?.url } alt="" style={{maxHeight:"600px"}}/>
                     )}
+                  
                   </div>
                   <div className="dlab-meta m-t30">
                     <ul>

@@ -36,28 +36,7 @@ function AboutPage() {
   };
 
   
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const post = await fetch("http://145.223.21.6:1337/api/updates?populate*");
-        const res = await post.json();
-         setUpdate(res)
-        console.log(res);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
-
-    fetchData();
-  }, []);
-  const content = [
-    {
-      type: 'paragraph',
-      children: [{ type: 'text', text: 'A simple paragraph' }],
-    },
-  ];
-   console.log("content", update?.data[2]?.mark)
-   const markContent = update?.data[2]?.markl;
+  
   return (
     <>
       <Header />

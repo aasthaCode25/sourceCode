@@ -1,4 +1,4 @@
-const BASE_URL = process.env.STRAPI_API_URL;
+const BASE_URL = "http://127.0.0.1:1337/api";
 const API_TOKEN = process.env.STRAPI_API_TOKEN;
 export async function fetchStrapiData(endpoint) {
     try {

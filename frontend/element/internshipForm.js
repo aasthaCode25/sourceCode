@@ -1,71 +1,74 @@
-import React from "react";
+import React, { useState } from "react";
 
-const handleSubmit = async (e) => {
-  e.preventDefault();
 
-  const formData = new FormData(e.target);
-
-  // Extracting form data
-  const name = formData.get("dzName");
-  const email = formData.get("dzEmail");
-  const phone = formData.get("dzOther[phone]");
-  const qualification = formData.get("dzOther[special_skills]");
-  const duration = formData.get("dzOther[Duration]");
-  const internshipType = formData.get("dzOther[choose_service]");
-  const message = formData.get("dzMessage");
-  const universityDetails = formData.get("dzOther[university_details]");
-  const passingYear = formData.get("dzOther[college_passing_year]");
-  const countryOfOrigin = formData.get("dzOther[country]");
-
-  // Phone number validation
-  const phoneRegex = /^\d{10}$/;
-  if (!phoneRegex.test(phone)) {
-    alert("Phone number must be exactly 10 digits.");
-    return;
-  }
-
-  // Email validation
-  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  if (!emailRegex.test(email)) {
-    alert("Please enter a valid email address.");
-    return;
-  }
-
-  try {
-    // Sending data to API
-    const response = await fetch("/api/internshipApplicationForm", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        name,
-        email,
-        phone,
-        qualification,
-        duration,
-        internshipType,
-        message,
-        universityDetails,
-        passingYear,
-        countryOfOrigin,
-      }),
-    });
-
-    if (response.ok) {
-      console.log("Form submitted successfully!");
-      e.target.reset(); // Reset the form on successful submission
-    } else {
-      console.error("Failed to submit the form");
-      alert("Failed to submit the form. Please try again.");
-    }
-  } catch (error) {
-    console.error("Error submitting the form:", error);
-    alert("An error occurred. Please try again later.");
-  }
-};
 
 function InternshipForm() {
+  const [status, setStatus] = useState(null);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+  
+    const formData = new FormData(e.target);
+  
+    // Extracting form data
+    const name = formData.get("dzName");
+    const email = formData.get("dzEmail");
+    const phone = formData.get("dzOther[phone]");
+    const qualification = formData.get("dzOther[special_skills]");
+    const duration = formData.get("dzOther[Duration]");
+    const internshipType = formData.get("dzOther[choose_service]");
+    const message = formData.get("dzMessage");
+    const universityDetails = formData.get("dzOther[university_details]");
+    const passingYear = formData.get("dzOther[college_passing_year]");
+    const countryOfOrigin = formData.get("dzOther[country]");
+  
+    // Phone number validation
+    const phoneRegex = /^\d{10}$/;
+    if (!phoneRegex.test(phone)) {
+      alert("Phone number must be exactly 10 digits.");
+      return;
+    }
+  
+    // Email validation
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      alert("Please enter a valid email address.");
+      return;
+    }
+  
+    try {
+      setStatus("Submitting...");
+      // Sending data to API
+      const response = await fetch("/api/internshipApplicationForm", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          phone,
+          qualification,
+          duration,
+          internshipType,
+          message,
+          universityDetails,
+          passingYear,
+          countryOfOrigin,
+        }),
+      });
+  
+      if (response.ok) {
+        setStatus("Application submitted successfully!");
+        e.target.reset(); // Reset the form on successful submission
+      } else {
+        const errorData = await response.json();
+        setStatus(`Submission failed: ${errorData.error || 'An error occurred'}`);
+      }
+    } catch (error) {
+      console.error("Error submitting the form:", error);
+      alert("An error occurred. Please try again later.");
+    }
+  };
   return (
     <div className="content-inner">
       <div className="container">
@@ -135,6 +138,13 @@ function InternshipForm() {
                   </div>
                 </div>
                 {/* Submit Button */}
+                {status && (
+                  <div className="col-12 mt-2">
+                    <p className={`text-center ${status.startsWith("Error") ? "text-danger" : "text-success"}`}>
+                      {status}
+                    </p>
+                  </div>
+                )}
                 <div className="col-sm-12 mt-2">
                   <button name="submit" type="submit" value="Submit Now" className="btn btn-primary gradient border-0 rounded-xl">Submit Now</button>
                 </div>
@@ -148,3 +158,4 @@ function InternshipForm() {
 }
 
 export default InternshipForm;
+

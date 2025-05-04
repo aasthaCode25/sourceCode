@@ -37,10 +37,7 @@ function Footer2() {
 							</div>
 							<div className="widget widget_getintuch">
 								<ul>
-									<li>
-										<i className="fa fa-phone gradient"></i>
-										<span>+91 123-456-7890<br/>+91 987-654-3210</span> 
-									</li>
+									
 									<li>
 										<i className="fa fa-envelope gradient"></i> 
 										 <span>manager@aasthaparivaar.org.in <br/>president@aasthaparivaar.org.in</span>
@@ -60,10 +57,9 @@ function Footer2() {
 						<div className="widget widget_services">
 							<h5 className="footer-title">Our links</h5>
 							<ul>
-								<li><Link href="#"><a>About Us</a></Link></li>
-								<li><Link href="#"><a>Services</a></Link></li>
-								<li><Link href="#"><a>Team</a></Link></li>
-								<li><Link href="#"><a>Blog</a></Link></li>
+								<li><Link href="/aboutPage"><a>About Us</a></Link></li>
+								
+								<li><Link href="/ourstories"><a>Blog</a></Link></li>
 							</ul>
 						</div>
                     </div>
@@ -71,11 +67,9 @@ function Footer2() {
 						<div className="widget widget_services">
 							<h5 className="footer-title">Our Services</h5>
 							<ul>
-								<li><Link href="#"><a>HIV Intervention Work</a></Link></li>
-								<li><Link href="#"><a>Childcare</a></Link></li>
-								<li><Link href="#"><a>Alternative Livelihood</a></Link></li>
-								<li><Link href="#"><a>Health</a></Link></li>
-								{/* <li><Link href="#"><a>App Design </a></Link></li> */}
+								<li><Link href="/children"><a>Children</a></Link></li>
+								<li><Link href="/alternativelivelihoods"><a>Alternative Livelihood</a></Link></li>
+								<li><Link href="/health"><a>Health</a></Link></li>
 							</ul>
 						</div>
                     </div>
@@ -89,7 +83,7 @@ function Footer2() {
             <div className="container">
                 <div className="row align-items-center">
                     <div className="col-lg-6 col-md-7 text-left"> 
-						<span className="copyright-text">Copyright © 2010 <a href="https://dexignzone.com/" target="_blank">Astha Parivar</a>. All rights reserved.</span> 
+						<span className="copyright-text">Copyright © 2010 <a href="https://dexignzone.com/" target="_blank">Aastha Parivar</a>. All rights reserved.</span> 
 					</div>
 					<div className="col-lg-6 col-md-5 text-right"> 
 						<div className="dlab-social-icon">

@@ -6,8 +6,8 @@ export async function sendSimpleMail({ name, email, message, phone, availability
     var transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: "shyamalfred@gmail.com",
-        pass: "ltjldqphmnsexyna",
+         user: process.env.EMAIL_USER,
+        pass: process.env.EMAIL_PASS,
       },
       tls: {
         rejectUnauthorized: false, // Disable SSL verification
@@ -15,8 +15,9 @@ export async function sendSimpleMail({ name, email, message, phone, availability
     });
 
     var mailOptions = {
-      from: "shyamalfred@gmail.com",
-      to: "shyamalfred@gmail.com", // Change this to your recipient's email address
+       from:  `"Volunteer Application- Aasthaparivaar" <${process.env.EMAIL_USER }>`,
+      to: process.env.RECIPIENT_EMAIL, // Change this to your recipient's email address
+      subject: `Volunteer Application from ${name}`,
    
       html: `
       <div style="font-family: Arial, sans-serif; padding: 20px; border-radius: 10px; background-color: #f5f5f5;">
